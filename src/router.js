@@ -21,7 +21,7 @@ export default new Router({
       component: Login
     },
     {
-      path: '/:area',
+      path: '/cursos/:area',
       component: Cursos
     },
     {
