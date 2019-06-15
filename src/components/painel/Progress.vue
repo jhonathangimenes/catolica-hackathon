@@ -6,7 +6,7 @@
     :size="100"
     :width="15"
     :value="percentage"
-    color="pink"
+    :color="color ? color : 'pink'"
   >{{ percentage }}%</v-progress-circular>
 </template>
 
@@ -14,7 +14,8 @@
 <script>
 export default {
   props: {
-    value: 0
+    value: 0,
+    color: null
   },
   data() {
     return {

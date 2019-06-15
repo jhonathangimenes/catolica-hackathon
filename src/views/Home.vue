@@ -35,13 +35,7 @@
               <v-card-title>
                 <span class="title">{{ item.name }}</span>
                 <v-spacer></v-spacer>
-                <v-progress-circular
-                  :rotate="360"
-                  :size="50"
-                  :value="item.value"
-                  :width="5"
-                  :color="item.colorProg"
-                >{{ item.value }}%</v-progress-circular>
+                <Progress :value="item.value * 10" :color="item.colorProg"/>
               </v-card-title>
             </v-card>
           </v-timeline-item>
@@ -53,6 +47,9 @@
 
 <script>
 export default {
+  components: {
+    Progress: () => import("../components/painel/Progress")
+  },
   data: () => ({
     items: [
       {
@@ -60,21 +57,21 @@ export default {
         color: "red lighten-2",
         icon: "fab fa-react",
         colorProg: "white",
-        value: 75
+        value: 8.0
       },
       {
         name: "Humanas",
         color: "purple darken-1",
         icon: "fas fa-male",
         colorProg: "white",
-        value: 23
+        value: 2.0
       },
       {
         name: "Biologicas",
         color: "green lighten-1",
         icon: "fas fa-vial",
         colorProg: "white",
-        value: 43
+        value: 5.0
       }
     ]
   })
