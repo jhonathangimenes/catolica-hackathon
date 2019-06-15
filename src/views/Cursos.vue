@@ -1,9 +1,10 @@
 <template>
   <v-container grid-list-md>
     <v-layout row wrap>
-      <v-flex v-for="curso in cursos" md4 :key="curso.id">
+      <v-flex v-for="curso in filtrarCursos" md4 :key="curso.id">
         <Card :cursoInfo="curso"/>
       </v-flex>
+      <h2 v-if="filtrarCursos.length === 0" class="error">Nenhum curso cadastrado!</h2>
     </v-layout>
   </v-container>
 </template>
@@ -13,7 +14,15 @@ export default {
   components: {
     Card: () => import("../components/cursos/Card")
   },
+  computed: {
+    filtrarCursos() {
+      return this.cursos.filter(curso => {
+        return curso.area.toLowerCase() === this.$route.params.area;
+      });
+    }
+  },
   data: () => ({
+    loading: true,
     cursos: [
       {
         id: 0,
@@ -21,8 +30,7 @@ export default {
         area: "Exatas",
         info:
           "O objetivo do curso é formar profissionais capazes de atuar na área de Tecnologia da Informação, criando soluções tecnológicas para determinar o fluxo de informações. O foco do curso está no desenvolvimento de software e no gerenciamento de sistemas informatizados.",
-        imagem:
-          "http://blog.portalpravaler.com.br/wp-content/uploads/2015/08/curso-de-sistemas-de-informacao-1000x620.jpg"
+        imagem: require("../assets/img/cursos/sistemas_informacao.jpg")
       },
       {
         id: 1,
@@ -30,8 +38,7 @@ export default {
         area: "Exatas",
         info:
           "O curso de Ciência da Computação, também chamado de Ciências da Computação, possui muitas disciplinas de Matemática e boa parte da estrutura curricular é composta por disciplinas destinadas ao aprendizado das linguagens de programação mais utilizadas.",
-        imagem:
-          "https://www.usc.br/custom/2008/uploads/cursos_graduacao/imagens_exatas/ciencia-da-computacao.jpg"
+        imagem: require("../assets/img/cursos/ciencia_computacao.jpg")
       },
       {
         id: 2,
@@ -39,8 +46,55 @@ export default {
         area: "Exatas",
         info:
           "O curso superior em Engenharia de Produção tem duração média de 5 anos e pode ser encontrado nas modalidades de ensino a distância e presencial. Algumas faculdades de tradição, como a Anhanguera, oferecem o curso nas duas opções. O conteúdo, a duração e a validade do diploma são idênticos!",
-        imagem:
-          "data:image/jpeg;base64,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"
+        imagem: require("../assets/img/cursos/engenharia_producao.jpg")
+      },
+      {
+        id: 3,
+        nome: "História",
+        area: "Humanas",
+        info:
+          "O curso superior em Engenharia de Produção tem duração média de 5 anos e pode ser encontrado nas modalidades de ensino a distância e presencial. Algumas faculdades de tradição, como a Anhanguera, oferecem o curso nas duas opções. O conteúdo, a duração e a validade do diploma são idênticos!",
+        imagem: require("../assets/img/cursos/historia.jpg")
+      },
+      {
+        id: 4,
+        nome: "Filosofia",
+        area: "Humanas",
+        info:
+          "O curso superior em Engenharia de Produção tem duração média de 5 anos e pode ser encontrado nas modalidades de ensino a distância e presencial. Algumas faculdades de tradição, como a Anhanguera, oferecem o curso nas duas opções. O conteúdo, a duração e a validade do diploma são idênticos!",
+        imagem: require("../assets/img/cursos/filosofia.jpg")
+      },
+      {
+        id: 5,
+        nome: "Sociologia",
+        area: "Humanas",
+        info:
+          "O curso superior em Engenharia de Produção tem duração média de 5 anos e pode ser encontrado nas modalidades de ensino a distância e presencial. Algumas faculdades de tradição, como a Anhanguera, oferecem o curso nas duas opções. O conteúdo, a duração e a validade do diploma são idênticos!",
+        imagem: require("../assets/img/cursos/sociologia.jpg")
+      },
+      {
+        id: 6,
+        nome: "Medicina",
+        area: "Biologicas",
+        info:
+          "O curso superior em Engenharia de Produção tem duração média de 5 anos e pode ser encontrado nas modalidades de ensino a distância e presencial. Algumas faculdades de tradição, como a Anhanguera, oferecem o curso nas duas opções. O conteúdo, a duração e a validade do diploma são idênticos!",
+        imagem: require("../assets/img/cursos/medicina.jpg")
+      },
+      {
+        id: 7,
+        nome: "Educação física",
+        area: "Biologicas",
+        info:
+          "O curso superior em Engenharia de Produção tem duração média de 5 anos e pode ser encontrado nas modalidades de ensino a distância e presencial. Algumas faculdades de tradição, como a Anhanguera, oferecem o curso nas duas opções. O conteúdo, a duração e a validade do diploma são idênticos!",
+        imagem: require("../assets/img/cursos/educacao_fisica.jpg")
+      },
+      {
+        id: 8,
+        nome: "Fisioterapia",
+        area: "Biologicas",
+        info:
+          "O curso superior em Engenharia de Produção tem duração média de 5 anos e pode ser encontrado nas modalidades de ensino a distância e presencial. Algumas faculdades de tradição, como a Anhanguera, oferecem o curso nas duas opções. O conteúdo, a duração e a validade do diploma são idênticos!",
+        imagem: require("../assets/img/cursos/fisioterapia.jpg")
       }
     ]
   })
