@@ -26,13 +26,15 @@
         </v-card>
       </v-flex>
     </v-layout>
+    <Grafico class="mt-5"/>
   </v-container>
 </template>
 
 <script>
 export default {
   components: {
-    Progress: () => import("../components/painel/Progress")
+    Progress: () => import("../components/painel/Progress"),
+    Grafico: () => import("../components/grafico/Grafico")
   },
   data: () => ({
     materias: [

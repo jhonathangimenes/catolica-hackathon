@@ -5,7 +5,6 @@
       <v-toolbar-title class="white--text"></v-toolbar-title>
     </router-link>
     <v-spacer></v-spacer>
-
     <img :src="require('@/assets/logo.png')" width="100px" height="35px">
   </v-toolbar>
 </template>
