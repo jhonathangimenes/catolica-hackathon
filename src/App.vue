@@ -1,9 +1,8 @@
 <template>
   <v-app>
     <NavBar/>
-
     <v-content>
-      <v-layout v-if="$router.history.current.path != '/'" class="hidden-lg-and-up">
+      <v-layout v-if="$router.history.current.path != '/'" v-show="$router.history.current.path != '/login'" class="hidden-lg-and-up">
         <v-btn flat @click="$router.back()">
           <v-icon>arrow_back</v-icon>
         </v-btn>

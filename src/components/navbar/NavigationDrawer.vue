@@ -4,9 +4,17 @@
       <v-list-tile-action>
         <v-icon>home</v-icon>
       </v-list-tile-action>
-        <router-link to="/painel" class="link">
-          <v-list-tile-title >Painel</v-list-tile-title>
-        </router-link>
+      <router-link to="/painel" class="link">
+        <v-list-tile-title>Painel</v-list-tile-title>
+      </router-link>
+    </v-list-tile>
+    <v-list-tile>
+      <v-list-tile-action>
+        <v-icon>account_circle</v-icon>
+      </v-list-tile-action>
+      <router-link to="/login" class="link">
+        <v-list-tile-title>Logout</v-list-tile-title>
+      </router-link>
     </v-list-tile>
   </v-list>
 </template>
@@ -26,10 +34,10 @@ export default {
 </script>
 
 <style scoped>
-  .link {
-    text-decoration:none!important; 
-    color: rgba(0,0,0,0.54);
-    margin-top: 6px;
-  }
+.link {
+  text-decoration: none !important;
+  color: rgba(0, 0, 0, 0.54);
+  margin-top: 6px;
+}
 </style>
 

@@ -1,5 +1,5 @@
 <template>
-  <v-container grid-list-md>
+  <v-container grid-list-md class="px-0 py-0 my-0">
     <h2 class="text-xs-center display-1">Confira seus scores:</h2>
     <v-layout row wrap text-xs-center>
       <v-flex xs6 v-for="materia in materias" :key="materia.id">
