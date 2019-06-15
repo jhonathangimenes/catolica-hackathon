@@ -42,7 +42,7 @@ export default new Vuex.Store({
         id: 1,
         faculdades: [
           {
-            id: 3,
+            id: 0,
             nome: "Católica do Tocantins",
             endereco:
               "Rodovia TO-050, Loteamento Coqueirinho, Lote 7, Cep: 77000-000 Palmas / TO",
@@ -51,7 +51,7 @@ export default new Vuex.Store({
             desconto: "R$ 582,85"
           },
           {
-            id: 4,
+            id: 1,
             nome: "CEULP/ULBRA",
             endereco:
               "Rodovia TO-050, Loteamento Coqueirinho, Lote 7, Cep: 77000-000 Palmas / TO",
@@ -60,7 +60,7 @@ export default new Vuex.Store({
             desconto: "R$ 525,10"
           },
           {
-            id: 5,
+            id: 2,
             nome: "Faculdade Objetivo",
             endereco:
               "Rodovia TO-050, Loteamento Coqueirinho, Lote 7, Cep: 77000-000 Palmas / TO",
@@ -74,7 +74,7 @@ export default new Vuex.Store({
         id: 2,
         faculdades: [
           {
-            id: 6,
+            id: 0,
             nome: "Católica do Tocantins",
             endereco:
               "Rodovia TO-050, Loteamento Coqueirinho, Lote 7, Cep: 77000-000 Palmas / TO",
@@ -83,7 +83,7 @@ export default new Vuex.Store({
             desconto: "R$ 882,85"
           },
           {
-            id: 7,
+            id: 1,
             nome: "CEULP/ULBRA",
             endereco:
               "Rodovia TO-050, Loteamento Coqueirinho, Lote 7, Cep: 77000-000 Palmas / TO",
@@ -92,7 +92,7 @@ export default new Vuex.Store({
             desconto: "R$ 765,10"
           },
           {
-            id: 8,
+            id: 2,
             nome: "Faculdade Objetivo",
             endereco:
               "Rodovia TO-050, Loteamento Coqueirinho, Lote 7, Cep: 77000-000 Palmas / TO",
@@ -106,7 +106,7 @@ export default new Vuex.Store({
         id: 3,
         faculdades: [
           {
-            id: 9,
+            id: 0,
             nome: "Católica do Tocantins",
             endereco:
               "Rodovia TO-050, Loteamento Coqueirinho, Lote 7, Cep: 77000-000 Palmas / TO",
@@ -115,7 +115,7 @@ export default new Vuex.Store({
             desconto: "sem desconto"
           },
           {
-            id: 10,
+            id: 1,
             nome: "CEULP/ULBRA",
             endereco:
               "Rodovia TO-050, Loteamento Coqueirinho, Lote 7, Cep: 77000-000 Palmas / TO",
@@ -124,7 +124,7 @@ export default new Vuex.Store({
             desconto: "sem desconto"
           },
           {
-            id: 11,
+            id: 2,
             nome: "Faculdade Objetivo",
             endereco:
               "Rodovia TO-050, Loteamento Coqueirinho, Lote 7, Cep: 77000-000 Palmas / TO",
@@ -138,7 +138,7 @@ export default new Vuex.Store({
         id: 4,
         faculdades: [
           {
-            id: 12,
+            id: 0,
             nome: "Católica do Tocantins",
             endereco:
               "Rodovia TO-050, Loteamento Coqueirinho, Lote 7, Cep: 77000-000 Palmas / TO",
@@ -147,7 +147,7 @@ export default new Vuex.Store({
             desconto: "sem desconto"
           },
           {
-            id: 13,
+            id: 1,
             nome: "CEULP/ULBRA",
             endereco:
               "Rodovia TO-050, Loteamento Coqueirinho, Lote 7, Cep: 77000-000 Palmas / TO",
@@ -156,7 +156,7 @@ export default new Vuex.Store({
             desconto: "sem desconto"
           },
           {
-            id: 14,
+            id: 2,
             nome: "Faculdade Objetivo",
             endereco:
               "Rodovia TO-050, Loteamento Coqueirinho, Lote 7, Cep: 77000-000 Palmas / TO",
@@ -170,7 +170,7 @@ export default new Vuex.Store({
         id: 5,
         faculdades: [
           {
-            id: 15,
+            id: 0,
             nome: "Católica do Tocantins",
             endereco:
               "Rodovia TO-050, Loteamento Coqueirinho, Lote 7, Cep: 77000-000 Palmas / TO",
@@ -179,7 +179,7 @@ export default new Vuex.Store({
             desconto: "sem desconto"
           },
           {
-            id: 16,
+            id: 1,
             nome: "CEULP/ULBRA",
             endereco:
               "Rodovia TO-050, Loteamento Coqueirinho, Lote 7, Cep: 77000-000 Palmas / TO",
@@ -188,7 +188,7 @@ export default new Vuex.Store({
             desconto: "sem desconto"
           },
           {
-            id: 17,
+            id: 2,
             nome: "Faculdade Objetivo",
             endereco:
               "Rodovia TO-050, Loteamento Coqueirinho, Lote 7, Cep: 77000-000 Palmas / TO",
@@ -202,7 +202,7 @@ export default new Vuex.Store({
         id: 6,
         faculdades: [
           {
-            id: 18,
+            id: 0,
             nome: "Católica do Tocantins",
             endereco:
               "Rodovia TO-050, Loteamento Coqueirinho, Lote 7, Cep: 77000-000 Palmas / TO",
@@ -211,7 +211,7 @@ export default new Vuex.Store({
             desconto: "R$ 982,85"
           },
           {
-            id: 19,
+            id: 1,
             nome: "CEULP/ULBRA",
             endereco:
               "Rodovia TO-050, Loteamento Coqueirinho, Lote 7, Cep: 77000-000 Palmas / TO",
@@ -220,7 +220,7 @@ export default new Vuex.Store({
             desconto: "R$ 945,10"
           },
           {
-            id: 20,
+            id: 2,
             nome: "Faculdade Objetivo",
             endereco:
               "Rodovia TO-050, Loteamento Coqueirinho, Lote 7, Cep: 77000-000 Palmas / TO",
@@ -234,7 +234,7 @@ export default new Vuex.Store({
         id: 7,
         faculdades: [
           {
-            id: 21,
+            id: 0,
             nome: "Católica do Tocantins",
             endereco:
               "Rodovia TO-050, Loteamento Coqueirinho, Lote 7, Cep: 77000-000 Palmas / TO",
@@ -243,7 +243,7 @@ export default new Vuex.Store({
             desconto: "R$ 852,85"
           },
           {
-            id: 22,
+            id: 1,
             nome: "CEULP/ULBRA",
             endereco:
               "Rodovia TO-050, Loteamento Coqueirinho, Lote 7, Cep: 77000-000 Palmas / TO",
@@ -252,7 +252,7 @@ export default new Vuex.Store({
             desconto: "R$ 935,10"
           },
           {
-            id: 23,
+            id: 2,
             nome: "Faculdade Objetivo",
             endereco:
               "Rodovia TO-050, Loteamento Coqueirinho, Lote 7, Cep: 77000-000 Palmas / TO",
@@ -266,7 +266,7 @@ export default new Vuex.Store({
         id: 8,
         faculdades: [
           {
-            id: 24,
+            id: 0,
             nome: "Católica do Tocantins",
             endereco:
               "Rodovia TO-050, Loteamento Coqueirinho, Lote 7, Cep: 77000-000 Palmas / TO",
@@ -275,7 +275,7 @@ export default new Vuex.Store({
             desconto: "R$ 902,85"
           },
           {
-            id: 25,
+            id: 1,
             nome: "CEULP/ULBRA",
             endereco:
               "Rodovia TO-050, Loteamento Coqueirinho, Lote 7, Cep: 77000-000 Palmas / TO",
@@ -284,7 +284,7 @@ export default new Vuex.Store({
             desconto: "R$ 865,10"
           },
           {
-            id: 26,
+            id: 2,
             nome: "Faculdade Objetivo",
             endereco:
               "Rodovia TO-050, Loteamento Coqueirinho, Lote 7, Cep: 77000-000 Palmas / TO",

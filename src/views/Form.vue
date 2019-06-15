@@ -5,7 +5,7 @@
       <v-text-field label="E-mail" value="pedro.silva@gmail.com" required></v-text-field>
       <v-text-field disabled label="Curso" value="Ciência da Computação" required></v-text-field>
       <v-text-field label="Data Nascimento" value="23/05/2001" required></v-text-field>
-      <v-text-field label="Valor mensalidade" value="R$ 878,00" required></v-text-field>
+      <v-text-field label="Valor mensalidade" :value="valorFormatado" required></v-text-field>
       <v-checkbox
         value="1"
         label="Aceitar os termos"
@@ -35,11 +35,22 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   data() {
     return {
       dialog: false
     };
+  },
+  computed: {
+    ...mapState(['cursos']),
+    valorFormatado() {
+      let valor = ''
+      this.cursos[this.$route.params.cursoId].faculdades[this.$route.params.faculdadeId].desconto == 'sem desconto'
+      ? valor = this.cursos[this.$route.params.cursoId].faculdades[this.$route.params.faculdadeId].mensalidade
+      : valor = this.cursos[this.$route.params.cursoId].faculdades[this.$route.params.faculdadeId].desconto
+      return valor
+    }
   },
   methods: {
     matricular() {

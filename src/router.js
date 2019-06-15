@@ -31,7 +31,7 @@ export default new Router({
       component: Faculdades
     },
     {
-      path: '/matricular/:valor',
+      path: '/matricular/:cursoId/:faculdadeId',
       name: 'matricular',
       component: Form
     }

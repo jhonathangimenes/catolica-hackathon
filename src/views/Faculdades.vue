@@ -16,7 +16,7 @@
             <p class="font-weight-bold color-red">{{ faculdade.desconto == 'sem desconto' ? 'Sem desconto' : 'Com desconto: ' + faculdade.desconto }}</p>
             <p>{{ faculdade.endereco }}</p>
             <v-layout justify-end>
-              <v-btn @click="$router.push('/matricular/' + faculdade.id )" class="success">Matricule-se</v-btn>
+              <v-btn @click="$router.push(`/matricular/${$route.params.id}/${faculdade.id}`)" class="success">Matricule-se</v-btn>
             </v-layout>
           </v-card-text>
         </v-card>
