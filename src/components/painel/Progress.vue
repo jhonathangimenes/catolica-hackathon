@@ -7,7 +7,7 @@
     :width="15"
     :value="percentage"
     color="pink"
-  >{{ percentage }}</v-progress-circular>
+  >{{ percentage }}%</v-progress-circular>
 </template>
 
 
