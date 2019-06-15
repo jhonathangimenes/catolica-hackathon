@@ -100,3 +100,11 @@ export default {
   })
 };
 </script>
+
+<style scoped>
+  .grid-list-md {
+    margin-top: 0px!important;
+    padding: 0px!important;
+  }
+</style>
+
