@@ -4,6 +4,7 @@ import Home from './views/Home.vue'
 import Login from './views/Login.vue'
 import Faculdades from './views/Faculdades.vue'
 import Cursos from './views/Cursos.vue'
+import Form from './views/Form.vue'
 
 Vue.use(Router)
 
@@ -25,9 +26,14 @@ export default new Router({
       component: Cursos
     },
     {
-      path: '/faculdades',
+      path: '/faculdades/:id',
       name: 'faculdades',
       component: Faculdades
+    },
+    {
+      path: '/matricular',
+      name: 'matricular',
+      component: Form
     }
   ]
 })
