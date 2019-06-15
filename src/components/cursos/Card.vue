@@ -21,7 +21,7 @@
     <v-slide-y-transition>
       <v-card-text v-show="show">
         <p>{{ cursoInfo.info }}</p>
-        <v-btn color="error">Teste vocacional</v-btn>
+        <v-btn color="error" class="mx-0">Teste vocacional</v-btn>
       </v-card-text>
     </v-slide-y-transition>
   </v-card>
