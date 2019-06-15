@@ -2,7 +2,7 @@
   <v-app>
     <NavBar/>
     <v-content>
-      <v-container fluid>
+      <v-container fluid fill-height>
         <transition name="list" mode="out-in">
           <router-view></router-view>
         </transition>

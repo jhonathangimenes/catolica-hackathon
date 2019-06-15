@@ -1,9 +1,11 @@
-import Vue from 'vue';
-import Router from 'vue-router';
-import Home from './views/Home.vue';
-import about from './views/About.vue';
+import Vue from 'vue'
+import Router from 'vue-router'
+import Home from './views/Home.vue'
+import Login from './views/Login.vue'
+import Faculdades from './views/Faculdades.vue'
+import Cursos from './views/Cursos.vue'
 
-Vue.use(Router);
+Vue.use(Router)
 
 export default new Router({
   mode: 'history',
@@ -14,9 +16,18 @@ export default new Router({
       component: Home
     },
     {
-      path: '/about',
-      name: 'about',
-      component: about
+      path: '/login',
+      name: 'login',
+      component: Login
+    },
+    {
+      path: '/cursos/:area',
+      component: Cursos
+    },
+    {
+      path: '/faculdades',
+      name: 'faculdades',
+      component: Faculdades
     }
   ]
-});
+})
