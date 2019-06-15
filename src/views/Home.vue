@@ -1,5 +1,5 @@
 <template>
-  <div  class="w-100">
+  <div class="w-100">
     <v-card dark flat>
       <v-img
         src="https://cdn.vuetifyjs.com/images/cards/forest.jpg"
@@ -25,7 +25,7 @@
         :icon="item.icon"
         fill-dot
       >
-        <v-card :color="item.color" dark>
+        <v-card :color="item.color" dark @click="$router.push('/cursos/'+item.name.toLowerCase())">
           <v-card-title>
             <span class="title">{{ item.name }}</span>
             <v-spacer></v-spacer>
@@ -62,7 +62,7 @@ export default {
         value: 23
       },
       {
-        name: "Biológicas",
+        name: "Biologicas",
         color: "green lighten-1",
         icon: "fas fa-vial",
         colorProg: "white",

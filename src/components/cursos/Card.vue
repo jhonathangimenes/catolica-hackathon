@@ -10,7 +10,7 @@
     </v-card-title>
 
     <v-card-actions>
-      <v-btn flat color="success">Escolher</v-btn>
+      <v-btn flat color="success" @click="$router.push('/faculdades/'+cursoInfo.id)">Escolher</v-btn>
 
       <v-spacer></v-spacer>
       <v-btn icon @click="show = !show">
