@@ -4,12 +4,9 @@
       <v-list-tile-action>
         <v-icon>home</v-icon>
       </v-list-tile-action>
-
-      <v-list-tile-content>
-        <router-link to="/painel">
-          <v-list-tile-title>Painel</v-list-tile-title>
+        <router-link to="/painel" class="link">
+          <v-list-tile-title >Painel</v-list-tile-title>
         </router-link>
-      </v-list-tile-content>
     </v-list-tile>
   </v-list>
 </template>
@@ -27,3 +24,12 @@ export default {
   })
 };
 </script>
+
+<style scoped>
+  .link {
+    text-decoration:none!important; 
+    color: rgba(0,0,0,0.54);
+    margin-top: 6px;
+  }
+</style>
+

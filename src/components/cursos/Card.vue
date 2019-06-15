@@ -20,7 +20,7 @@
 
     <v-slide-y-transition>
       <v-card-text v-show="show">
-        <p>{{ cursoInfo.info }}</p>
+        <p class="justify-text">{{ cursoInfo.info }}</p>
         <v-btn to="/vocacional" color="error" class="mx-0">Teste vocacional</v-btn>
       </v-card-text>
     </v-slide-y-transition>
@@ -41,5 +41,8 @@ export default {
 <style scoped>
 .headline {
   margin: 0px !important;
+}
+.justify-text {
+  text-align: justify;
 }
 </style>

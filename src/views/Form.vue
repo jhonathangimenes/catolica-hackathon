@@ -28,7 +28,16 @@
             <v-card>
               <v-card-title class="headline grey lighten-2" primary-title>Termos</v-card-title>
 
-              <v-card-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</v-card-text>
+              <v-card-text class="justify-text">
+                Por meio do documento de Termos e Condições de Uso um site ou um aplicativo explica aos usuários quais são as condições de utilização do serviço disponibilizado, seja ele gratuito ou pago.
+                Dessa forma, este documento é como um contrato estabelecido entre o site e seu usuário, determinando os seus direitos e suas responsabilidades como organização e também os direitos e responsabilidades do seu consumidor.
+              </v-card-text>
+              <v-divider></v-divider>
+
+              <v-card-actions>
+                <v-spacer></v-spacer>
+                <v-btn color="primary" flat @click="dialog = !dialog">OK</v-btn>
+              </v-card-actions>
             </v-card>
           </v-dialog>
         </div>
@@ -85,5 +94,8 @@ export default {
 }
 .text-xs-center {
   text-align: left !important;
+}
+.justify-text {
+  text-align: justify;
 }
 </style>
