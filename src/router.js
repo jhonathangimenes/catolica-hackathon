@@ -6,6 +6,7 @@ import Faculdades from './views/Faculdades.vue'
 import Cursos from './views/Cursos.vue'
 import Form from './views/Form.vue'
 import Painel from './views/Painel.vue'
+import Vocacional from './views/Vocacional.vue'
 
 Vue.use(Router)
 
@@ -40,6 +41,11 @@ export default new Router({
       path: '/painel',
       name: 'painel',
       component: Painel
+    },
+    {
+      path: '/vocacional',
+      name: 'vocacional',
+      component: Vocacional
     }
   ]
 })

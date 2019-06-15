@@ -33,7 +33,7 @@
           </v-dialog>
         </div>
         <v-layout justify-end>
-          <v-btn class="error">Cancelar</v-btn>
+          <v-btn @click="$router.push('/')" class="error">Cancelar</v-btn>
           <v-btn @click="matricular()" class="success">Matricular</v-btn>
         </v-layout>
       </form>

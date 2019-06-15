@@ -16,6 +16,8 @@
           </template>
           <v-card>
             <v-card-text>
+              <p class="my-0">Curso: {{ cursosDesc[$route.params.id].nome }}</p>
+              <v-rating v-model="rating" background-color="orange lighten-3" color="orange" small></v-rating>
               <p>Mensalidade: {{ faculdade.mensalidade }}</p>
               <p
                 class="font-weight-bold color-red"
@@ -39,8 +41,13 @@
 import { mapState } from "vuex";
 
 export default {
+  data() {
+    return {
+      rating: 3
+    };
+  },
   computed: {
-    ...mapState(["cursos"])
+    ...mapState(["cursos", "cursosDesc"])
   }
 };
 </script>
