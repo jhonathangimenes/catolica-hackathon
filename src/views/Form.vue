@@ -43,7 +43,25 @@
         </div>
         <v-layout justify-end>
           <v-btn @click="$router.push('/')" class="error">Cancelar</v-btn>
-          <v-btn @click="matricular()" class="success">Matricular</v-btn>
+          <v-dialog v-model="dialog2">
+            <template v-slot:activator="{ on }">
+              <v-btn class="success" v-on="on">Matricular</v-btn>
+            </template>
+
+            <v-card>
+              <v-card-title class="headline grey lighten-2" primary-title>Matrícula confirmada</v-card-title>
+
+              <v-card-text class="justify-text">
+                Sua matrícula foi enviada a faculdade.
+              </v-card-text>
+              <v-divider></v-divider>
+
+              <v-card-actions>
+                <v-spacer></v-spacer>
+                <v-btn color="primary" flat @click="matricular()">OK</v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-dialog>
         </v-layout>
       </form>
     </v-flex>
@@ -55,7 +73,8 @@ import { mapState } from "vuex";
 export default {
   data() {
     return {
-      dialog: false
+      dialog: false,
+      dialog2: false
     };
   },
   computed: {
