@@ -22,9 +22,11 @@
           </v-btn>
         </v-layout>
         <v-text-field label="E-mail" required></v-text-field>
-        <v-text-field label="Senha" required></v-text-field>
+        <v-text-field label="Senha" type="password" required></v-text-field>
+        <v-btn flat small class="px-0 py-0 mx-0 my-0" color="primary">Esqueceu senha</v-btn>
         <v-checkbox label="Lembre-me" required></v-checkbox>
         <v-layout justify-end>
+          <v-btn flat small>Cadastra-se</v-btn>
           <v-btn to="/" class="primary">Entrar</v-btn>
         </v-layout>
       </v-card>
