@@ -4,7 +4,7 @@
 
     <v-content>
       <v-layout v-if="$router.history.current.path != '/'" class="hidden-lg-and-up">
-        <v-btn outline @click="$router.back()">
+        <v-btn flat @click="$router.back()">
           <v-icon>arrow_back</v-icon>
         </v-btn>
       </v-layout>

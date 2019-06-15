@@ -10,13 +10,13 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState } from "vuex";
 export default {
   components: {
     Card: () => import("../components/cursos/Card")
   },
   computed: {
-    ...mapState(['cursosDesc']),
+    ...mapState(["cursosDesc"]),
     filtrarCursos() {
       return this.cursosDesc.filter(curso => {
         return curso.area.toLowerCase() === this.$route.params.area;
@@ -24,15 +24,15 @@ export default {
     }
   },
   data: () => ({
-    loading: true,
+    loading: true
   })
 };
 </script>
 
 <style scoped>
-  .grid-list-md {
-    margin-top: 0px!important;
-    padding: 0px!important;
-  }
+.grid-list-md {
+  margin-top: 0px !important;
+  padding: 0px !important;
+}
 </style>
 

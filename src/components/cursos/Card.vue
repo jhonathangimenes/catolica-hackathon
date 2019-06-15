@@ -39,7 +39,7 @@ export default {
 </script>
 
 <style scoped>
-  .headline {
-    margin: 0px!important;
-  }
+.headline {
+  margin: 0px !important;
+}
 </style>
