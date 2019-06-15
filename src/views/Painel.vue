@@ -18,7 +18,7 @@
             <div>
               <div class="headline" style="font-size: 20px !important">
                 Score total:
-                <strong>9.2</strong>
+                <strong>8.3</strong>
                 <v-icon right color="pink" size="30">far fa-smile-beam</v-icon>
               </div>
             </div>

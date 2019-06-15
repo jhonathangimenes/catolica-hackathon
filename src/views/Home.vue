@@ -9,7 +9,7 @@
           >
             <v-container fill-height>
               <v-layout align-center>
-                <p class="display-4 font-weight-regular mr-4">9.2</p>
+                <p class="display-4 font-weight-regular mr-4">8.3</p>
                 <v-layout column justify-end>
                   <div class="headline font-weight-light">Pedro</div>
                   <div class="text-uppercase font-weight-light">Score</div>
