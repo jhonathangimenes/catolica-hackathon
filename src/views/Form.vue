@@ -3,7 +3,7 @@
     <form class="w-100">
       <v-text-field label="Name" value="Pedro Gomes Silva" required></v-text-field>
       <v-text-field label="E-mail" value="pedro.silva@gmail.com" required></v-text-field>
-      <v-text-field disabled label="Curso" value="Ciência da Computação" required></v-text-field>
+      <v-text-field disabled label="Curso" :value="cursosDesc[$route.params.cursoId].nome" required></v-text-field>
       <v-text-field label="Data Nascimento" value="23/05/2001" required></v-text-field>
       <v-text-field disabled label="Valor mensalidade" :value="valorFormatado" required></v-text-field>
       <v-checkbox
@@ -43,7 +43,7 @@ export default {
     };
   },
   computed: {
-    ...mapState(['cursos']),
+    ...mapState(['cursos', 'cursosDesc']),
     valorFormatado() {
       let valor = ''
       this.cursos[this.$route.params.cursoId].faculdades[this.$route.params.faculdadeId].desconto == 'sem desconto'
