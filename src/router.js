@@ -4,6 +4,9 @@ import Home from './views/Home.vue'
 import Login from './views/Login.vue'
 import Faculdades from './views/Faculdades.vue'
 import Cursos from './views/Cursos.vue'
+import Form from './views/Form.vue'
+import Painel from './views/Painel.vue'
+import Vocacional from './views/Vocacional.vue'
 
 Vue.use(Router)
 
@@ -25,9 +28,24 @@ export default new Router({
       component: Cursos
     },
     {
-      path: '/faculdades',
+      path: '/faculdades/:id',
       name: 'faculdades',
       component: Faculdades
+    },
+    {
+      path: '/matricular/:cursoId/:faculdadeId',
+      name: 'matricular',
+      component: Form
+    },
+    {
+      path: '/painel',
+      name: 'painel',
+      component: Painel
+    },
+    {
+      path: '/vocacional',
+      name: 'vocacional',
+      component: Vocacional
     }
   ]
 })

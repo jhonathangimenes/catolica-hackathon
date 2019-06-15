@@ -10,7 +10,7 @@
     </v-card-title>
 
     <v-card-actions>
-      <v-btn flat color="success">Escolher</v-btn>
+      <v-btn flat color="success" @click="$router.push('/faculdades/'+cursoInfo.id)">Escolher</v-btn>
 
       <v-spacer></v-spacer>
       <v-btn icon @click="show = !show">
@@ -20,8 +20,8 @@
 
     <v-slide-y-transition>
       <v-card-text v-show="show">
-        <p>{{ cursoInfo.info }}</p>
-        <v-btn color="error" class="mx-0">Teste vocacional</v-btn>
+        <p class="justify-text">{{ cursoInfo.info }}</p>
+        <v-btn to="/vocacional" color="error" class="mx-0">Teste vocacional</v-btn>
       </v-card-text>
     </v-slide-y-transition>
   </v-card>
@@ -37,3 +37,12 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.headline {
+  margin: 0px !important;
+}
+.justify-text {
+  text-align: justify;
+}
+</style>

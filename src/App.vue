@@ -2,6 +2,11 @@
   <v-app>
     <NavBar/>
     <v-content>
+      <v-layout v-if="$router.history.current.path != '/'" v-show="$router.history.current.path != '/login'" class="hidden-lg-and-up">
+        <v-btn flat @click="$router.back()">
+          <v-icon>arrow_back</v-icon>
+        </v-btn>
+      </v-layout>
       <v-container fluid fill-height>
         <transition name="list" mode="out-in">
           <router-view></router-view>
@@ -18,6 +23,9 @@ export default {
   name: "App",
   components: {
     NavBar
+  },
+  created() {
+    console.log(this.$router.history.current.path);
   },
   data() {
     return {
