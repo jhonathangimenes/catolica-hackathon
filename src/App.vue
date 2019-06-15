@@ -43,5 +43,4 @@ export default {
   position: absolute;
   width: calc(100% - 31px);
 }
-
 </style>
